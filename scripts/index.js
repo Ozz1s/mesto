@@ -10,12 +10,12 @@ const profileName = document.querySelector('.profile__title');
 const profileBusy = document.querySelector('.profile__subtitle');
 
 function openPopup() {
-    aboutPopup.classList.add('popup__opened');
+    aboutPopup.classList.add('popup_opened');
 }
 aboutButton.addEventListener('click', openPopup);
 
 function closePopup() {
-    aboutPopup.classList.remove('popup__opened');
+    aboutPopup.classList.remove('popup_opened');
 }
 closeBtn.addEventListener('click', closePopup);
 
