@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
-    <link rel="stylesheet" href="./vendor/fonts/font.css">
     <script src="./scripts/index.js" defer></script>
     <title>Mesto</title>
 </head>
 
 <body class="body">
     <header class="header">
-        <img class="header__logo" src="./images/Vector.png" alt="Логотип Место">
+        <img class="header__logo" src="./images/Vector.svg" alt="Логотип Место">
     </header>
     <main class="content">
         <section class="profile">
@@ -30,45 +28,45 @@
         </section>
         <section class="elements">
             <article class="element">
-                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="" class="element__image">
+                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото горы Карачаевск" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Карачаевск</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
             <article class="element">
-                <img src="./images/kirill-pershin-2-1404681-unsplash.png" alt="" class="element__image">
+                <img src="./images/kirill-pershin-2-1404681-unsplash.png" alt="фото горы Гора Эльбрус" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
             <article class="element">
-                <img src="./images/kirill-pershin-3-1556355-unsplash.png" alt="" class="element__image">
+                <img src="./images/kirill-pershin-3-1556355-unsplash.png" alt="фото горы Домбай" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
             <article class="element">
-                <img src="./images/kirill-pershin-2-1404681-unsplash.png" alt="" class="element__image">
+                <img src="./images/kirill-pershin-2-1404681-unsplash.png" alt="фото горы Гора Эльбрус" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Гора Эльбрус</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
             <article class="element">
-                <img src="./images/kirill-pershin-3-1556355-unsplash.png" alt="" class="element__image">
+                <img src="./images/kirill-pershin-3-1556355-unsplash.png" alt="фото горы Домбай" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Домбай</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
             <article class="element">
-                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="" class="element__image">
+                <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото горы Карачаевск" class="element__image">
                 <div class="element__container">
                     <h2 class="element__title">Карачаевок-Ч...</h2>
-                    <button class="element__like-button" type="submit" ></button>
+                    <button class="element__like-button" type="button" ></button>
                 </div>
             </article>
         </section>
@@ -78,11 +76,11 @@
     </footer>
     <div class="popup">
         <div class="popup__container">
-            <button class="popup__close-btn" title="Завершить редактирование"></button>
+            <button class="popup__close-btn" type="button" title="Завершить редактирование"></button>
             <h2 class="popup__header">Редактировать профиль</h2>
-            <form action="#" class="popup__form">
-                <input class="popup__name popup__name_input_name" type="text" name="addname" value="Жак-Ив Кусто" placeholder="Имя пользовотеля">
-                <input class="popup__busy popup__busy_input_busy" type="text" name="addbusy" value="Исследователь океана" placeholder="Род деятельности">
+            <form action="#" class="popup__form" name="myForm">
+                <input class="popup__name popup__name_input_name" type="text" name="addname"  placeholder="Имя пользовотеля">
+                <input class="popup__name popup__name_input_busy" type="text" name="addbusy"  placeholder="Род деятельности">
                 <button class="popup__save-btn" type="submit" name="saveForm">Сохранить</button>
             </form>        
         </div>

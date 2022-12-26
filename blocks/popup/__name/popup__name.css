@@ -4,14 +4,17 @@
     line-height: 17px;
     color: #000000;
     border: none;
-    opacity: 0.2;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 47px;
     padding-bottom: 9px;
 }
 
 @media screen and (max-width: 500px) {
-    .popup__name{
+    .popup__name:first-child{
         margin-top: 74px;
+    }
+
+    .popup__name:last-of-type{
+        margin-top: 27px;
     }
 }

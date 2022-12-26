@@ -3,6 +3,7 @@
     max-width: 120px;
     height: 100%;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {

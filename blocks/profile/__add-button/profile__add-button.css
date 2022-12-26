@@ -13,11 +13,17 @@
     cursor: pointer;
 }
 
+.profile__add-button:hover{
+    opacity: 0.6;
+}
+
 @media screen and (max-width: 500px) {
     .profile__add-button{
         margin: 0;
         box-sizing: border-box;
         width: 282px;
         margin-top: 32px;
+        background-image: url(../../../images/Vector-mobile-add-button.svg);
     }
 }
+
