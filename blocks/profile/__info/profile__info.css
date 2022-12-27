@@ -6,9 +6,10 @@
     padding-top: 22px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 640px) {
     .profile__info {
         padding-top: 26px;
+        align-self: center;
     }
 }
 
