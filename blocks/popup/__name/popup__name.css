@@ -5,16 +5,16 @@
     color: #000000;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-top: 47px;
+    margin-top: 27px;
     padding-bottom: 9px;
 }
 
 @media screen and (max-width: 500px) {
     .popup__name:first-child{
-        margin-top: 74px;
+        margin-top: 54px;
     }
 
     .popup__name:last-of-type{
-        margin-top: 27px;
+        margin-top: 7px;
     }
 }

@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <script src="./scripts/index.js" defer></script>
-
     <title>Mesto</title>
 </head>
 
@@ -38,11 +36,14 @@
             <button class="popup__close-btn popup__close-btn_profile" type="button"
                 title="Завершить редактирование"></button>
             <h2 class="popup__header">Редактировать профиль</h2>
-            <form action="#" class="popup__form" name="myForm">
-                <input class="popup__name popup__name_input_name" type="text" name="addname"
-                    placeholder="Имя пользовотеля">
-                <input class="popup__name popup__name_input_busy" type="text" name="addbusy"
-                    placeholder="Род деятельности">
+            <form action="#" class="popup__form" name="myForm" novalidate>
+                <input class="popup__name popup__name_input_name" id="popup-name" type="text" name="addname"
+                    placeholder="Имя пользовотеля" required minlength="2" maxlength="40">
+                    <span class="popup-error popup-name-error"></span>
+                <input class="popup__name popup__name_input_busy"  id="popup-busy" type="text" name="addbusy"
+                    placeholder="Род деятельности" required minlength="2" maxlength="200">
+                    <span class="popup-error popup-busy-error"></span>
+
                 <button class="popup__save-btn" type="submit" name="saveForm">Сохранить</button>
             </form>
         </div>
@@ -51,10 +52,13 @@
         <div class="popup__container">
             <button class="popup__close-btn popup__close-btn_add" type="button" title="Завершить создание"></button>
             <h2 class="popup__header">Новое место</h2>
-            <form action="#" class="popup__form" name="myForm">
-                <input class="popup__name popup__name_input_title" type="text" name="addtitle"
-                    placeholder="Имя картинки">
-                <input class="popup__name popup__name_input_src" type="text" name="addsrc" placeholder="ссылка">
+            <form action="#" class="popup__form" name="myForm" novalidate>
+                <input class="popup__name popup__name_input_title"id="popup-title" type="text" name="addtitle"
+                    placeholder="Имя картинки" required minlength="2" maxlength="30">
+                    <span class="popup-error popup-title-error"></span>
+                <input class="popup__name popup__name_input_src" id="popup-url" type="url" name="addsrc" 
+                    placeholder="ссылка" required >
+                <span class="popup-error popup-url-error"></span>
                 <button class="popup__save-btn" type="submit" name="saveForm">Создать</button>
             </form>
         </div>
@@ -77,5 +81,8 @@
         </article>
     </template>
 </body>
+<script src="./scripts/validate.js"></script>
+<script src="./scripts/cards.js"></script>
+<script src="./scripts/index.js"></script>
 
 </html>
