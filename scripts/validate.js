@@ -42,9 +42,18 @@ const setEventListeners = (formElement, config) => {
     });
 };
 
+function disabledButton(formElement, config) {
+    const buttonElement = formElement.querySelector(config.submitButtonSelector)
+    buttonElement.classList.add(config.inactiveButtonClass)
+    buttonElement.setAttribute('disabled' , 'disabled');
+} 
+
 function enableValidation(config) {
     const formList = Array.from(document.querySelectorAll(config.formSelector));
     formList.forEach((formElement) => {
+        formElement.addEventListener('submit' , (evt) => {
+            disabledButton(formElement, config);
+        })
         setEventListeners(formElement, config);
     });
 }
