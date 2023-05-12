@@ -1,5 +1,5 @@
 export default class Card {
-  constructor(cardData,selectorTemplate,openImage) {
+  constructor(cardData, selectorTemplate, openImage) {
     this._name = cardData.name;
     this._link = cardData.link;
     this._cardData = cardData;
@@ -7,33 +7,33 @@ export default class Card {
     this._openImage = openImage;
   }
 
-  _getTemplate(){
+  _getTemplate() {
     const cardElement = document.querySelector(this._selectorTemplate)
-    .content.querySelector('.element')
-    .cloneNode(true);
+      .content.querySelector('.element')
+      .cloneNode(true);
     return cardElement;
   }
 
-  
-//Лайк
-  _likeCard = () =>  {
+
+  //Лайк
+  _likeCard = () => {
     console.log(this._elementLikeButton)
     this._elementLikeButton.classList.toggle('element__like-button-active');
   }
-//Удаление
+  //Удаление
   _deleteCard = () => {
     this._element.remove();
     this._element = null;
   }
- 
+
   _handleOpenPopup = () => {
     this._openImage(this._cardData);
   }
-//Навешивание событий
+  //Навешивание событий
   _setEventListeners() {
     this._elementLikeButton.addEventListener('click', this._likeCard);
-		this._elementDeleteButton.addEventListener('click', this._deleteCard);
-		this._elementImage.addEventListener('click', this._handleOpenPopup);
+    this._elementDeleteButton.addEventListener('click', this._deleteCard);
+    this._elementImage.addEventListener('click', this._handleOpenPopup);
   }
   generatCard() {
     this._element = this._getTemplate();
